@@ -46,7 +46,8 @@ namespace DA_Xuong.Controllers
         }
         public IActionResult SanPham()
         {
-            return View();
+            List<SACH> projects = _db.SACH.ToList();
+            return View(projects);
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
